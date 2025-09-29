@@ -32,20 +32,20 @@ const navigationData = [
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)
-    const links = navigationData.map(link => <li className='mr-10'><a href={link.path}>{link.name}</a></li>)
+    const links = navigationData.map(link => <li className='px-4 mr-10 hover:bg-[#fb2056]'><a href={link.path}>{link.name}</a></li>)
     return (
-        <nav className='flex justify-between mx-10'>
+        <nav className='flex justify-between mx-10 mt-4'>
             <span className='flex' onClick={()=> setOpen(!open)}>
                 {
                     open ? 
                     <X className='md:hidden'></X> : <Menu className='md:hidden'></Menu>
                 }
-                <ul className='md:hidden'>
+                <ul className={`md:hidden absolute duration-1000 ${open ? "top-8" : "-top-40"}`}>
                 {links}
                 </ul>
                 
-            
-            <h3 className='ml-4'>My NavBar</h3>
+              
+            <h1 className='ml-4'>NavBar</h1>
             </span>
              
             <ul className='md:flex hidden' >
