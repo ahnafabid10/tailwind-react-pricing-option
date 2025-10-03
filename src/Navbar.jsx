@@ -40,7 +40,7 @@ const Navbar = () => {
                     open ? 
                     <X className='md:hidden'></X> : <Menu className='md:hidden'></Menu>
                 }
-                <ul className={`md:hidden absolute duration-1000 ${open ? "top-8" : "-top-40"}`}>
+                <ul className={`md:hidden absolute duration-1000 ${open ? "top-12" : "-top-40"}`}>
                 {links}
                 </ul>
                 
